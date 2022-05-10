@@ -1,0 +1,109 @@
+/* imported fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+
+/* general styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+#root {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* general section */
+.login-section {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+}
+
+/* fist div to the left with the image */
+.first-login-div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  font-family: 'Dancing Script';
+}
+
+.image-login {
+  display: flex;
+  padding-top: 100px;
+  align-items: center;
+  z-index: -1;
+}
+
+.login-welcome{
+  display: flex;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+/* second div with the login card */
+.second-login-div {
+  display: flex;
+  height: 100%;
+  width: 50%;
+}
+
+.login-card {
+  display: flex;
+  flex-direction: column;
+  margin: 20% auto;
+  padding: 10px;
+  height: 60%;
+  width: 45%;
+  font-family: 'Arima Madurai';
+  background-color: #EFD7AD;
+  border: solid black 1px;
+  border-radius: 10px;
+}
+
+.login-header {
+  display: flex;
+  font-family: 'Cookie';
+  font-weight: normal;
+  font-size: 64px;
+  padding-top: 50px;
+  justify-content: center;
+}
+
+.login-subtitle {
+  display: flex;
+  font-size: 26px;
+  font-weight: normal;
+  margin: 50px auto;
+  justify-content: center;
+}
+
+.login-button {
+  display: flex;
+  height: 50px;
+  width: 150px;
+  margin: 15px auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-line{
+  display: flex;
+  width: 160px;
+  margin: 50px auto;
+  border: 1px solid black;
+}
+
+.login-tip {
+  display: flex;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 20px auto;
+}

@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
 
 /* general styles */
 * {
@@ -17,7 +19,7 @@
   width: 100%;
 }
 
-/* general section */
+/* GENERAL SECTION OF THE FIRST VIEW. LOGIN PAGE */
 .login-section {
   display: flex;
   flex-direction: row;
@@ -48,7 +50,7 @@
   font-weight: normal;
 }
 
-/* second div with the login card */
+/* second div to the right with the login card */
 .second-login-div {
   display: flex;
   height: 100%;
@@ -85,13 +87,33 @@
   justify-content: center;
 }
 
+/* Google login button */
 .login-button {
   display: flex;
-  height: 50px;
-  width: 150px;
-  margin: 15px auto;
+  height: 60px;
+  width: 70%;
+  margin: 0 auto;
+  background-color: white;
+  font-size: 21px;
+  font-weight: normal;
+  font-family: 'Noto Sans JP';
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.image-button {
+  display: flex;
+  height: 43px;
+  width: 43px;
+  order: -1;
+  margin: 5px;
+}
+
+.login-button:hover {
+  outline: 1px solid black;
 }
 
 .login-line{
@@ -106,4 +128,73 @@
   font-size: 20px;
   font-weight: normal;
   margin: 20px auto;
+}
+
+/* GENERAL SECTION OF THE SECOND VIEW. HOME PAGE. */
+.home-section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  /* border: 2px solid purple; */
+}
+
+/* menu bar */
+.home-menu {
+  display: flex;
+  background-color: #EFD7AD;
+  height: 10%;
+  width: 100%;
+  border-bottom: 2px solid black;
+  order: -1;
+  /* border: 2px solid red; */
+}
+
+/* logout button */
+.logout-image {
+  display: flex;
+  cursor: pointer;
+  padding: 15px;
+  /* border: 2px solid black; */
+}
+
+
+
+/* main section for the posts */
+.home-main {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  /* border: 2px solid green; */
+}
+
+ /* .home-icon {
+  display: flex;
+  height: 70%;
+  width: 40%;
+  border: 1px solid black;
+} */
+
+/* .logout-image {
+  display: flex;
+  padding: 15px;
+  border: 2px solid black;
+} */
+
+.post-input {
+  display: flex;
+  height: 20%;
+  width: 30%;
+  font-size: 18px;
+  font-family: 'Nanum Gothic Coding';
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 15px;
+  background-color: #EFD7AD;
+  overflow: auto;
+  outline: none;
+  resize: none;
+  word-break: break-all;
+  border-radius: 10px;
+  border: 2px solid black;
 }

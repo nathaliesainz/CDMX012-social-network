@@ -36,6 +36,10 @@ export const login = () => {
   loginButton.className = 'login-button';
   loginButton.textContent = 'Login with Google';
 
+  const imageLoginButton = document.createElement('img');
+  imageLoginButton.className = 'image-button';
+  imageLoginButton.src = './img/loginGoogle.png';
+
   loginButton.addEventListener('click', () => {
     logInWithGoogle().then((result) => {
       console.log(result.user);
@@ -59,6 +63,7 @@ export const login = () => {
   loginCard.appendChild(loginButton);
   loginCard.appendChild(loginLine);
   loginCard.appendChild(loginTip);
+  loginButton.appendChild(imageLoginButton);
 
   loginSection.append(firstLoginDiv, secondLoginDiv);
   return loginSection;

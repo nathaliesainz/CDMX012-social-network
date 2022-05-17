@@ -1,7 +1,7 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.8.0/firebase-app.js';
 import { GoogleAuthProvider } from 'https://www.gstatic.com/firebasejs/9.8.0/firebase-auth.js';
+import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.8.0/firebase-firestore.js';
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: 'AIzaSyCrfc9Ioed6j472Wui7J32E8UQk6OqT6w0',
   authDomain: 'instacat-e1674.firebaseapp.com',
@@ -12,6 +12,9 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+
+// Initialize Cloud Firestore and get a reference to the service
+export const db = getFirestore(app);
 
 export const provider = new GoogleAuthProvider();

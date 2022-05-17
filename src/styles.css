@@ -27,7 +27,7 @@
   width: 100%;
 }
 
-/* fist div to the left with the image */
+/* first div to the left with the image */
 .first-login-div {
   display: flex;
   flex-direction: column;
@@ -197,4 +197,19 @@
   word-break: break-all;
   border-radius: 10px;
   border: 2px solid black;
+}
+
+.post-button {
+  display: flex;
+  margin: 0 auto;
+  padding: 7px;
+  color: white;
+  height: 5%;
+  width: 5%;
+  background-color: black;
+  font-size: 15px;
+  font-family: 'Nanum Gothic Coding';
+  border: 2px solid black;
+  border-radius: 10px;
+  order: 2;
 }

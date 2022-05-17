@@ -1,4 +1,5 @@
 import { logOut } from '../lib/auth.js';
+import { createPost } from '../lib/firestore.js';
 
 export const home = () => {
   const homeSection = document.createElement('section');
@@ -28,18 +29,23 @@ export const home = () => {
 
   const postInput = document.createElement('textarea');
   postInput.className = 'post-input';
-  postInput.setAttribute('placeholder', "What's happening?");
+  postInput.setAttribute('placeholder', "What's happening?"); // placeholder
 
   const postButton = document.createElement('button');
-  postButton.classList = ('post-button');
+  postButton.classList = 'post-button';
   postButton.textContent = 'Post';
+
+  postButton.addEventListener('click', () => {
+    console.log(createPost(postInput.value));
+    // imprimir data en caja de input
+  });
 
   homeSection.appendChild(homeMenu);
   homeMenu.appendChild(logoutImage);
   homeSection.appendChild(homeMain);
   homeMain.appendChild(homeIcon);
   homeMain.appendChild(postInput);
-  postInput.appendChild(postButton);
+  homeMain.appendChild(postButton);
 
   homeSection.append(homeMenu, homeMain);
   return homeSection;

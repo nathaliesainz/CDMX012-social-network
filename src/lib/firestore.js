@@ -1,8 +1,14 @@
-import { collection, addDoc } from 'https://www.gstatic.com/firebasejs/9.8.0/firebase-firestore.js';
+import {
+  collection, addDoc, getDocs, query,
+} from 'https://www.gstatic.com/firebasejs/9.8.0/firebase-firestore.js';
 import { db } from './firebaseConfig.js';
 
-export const createPost = (element) => {
+export const savePost = (post) => {
   addDoc(collection(db, 'posts'), {
-    contenido: element,
+    contenido: post,
   });
 };
+
+export const getPosts = () => getDocs(collection(db, 'posts'));
+
+export const q = query(collection(db, 'posts'));

@@ -1,5 +1,6 @@
 import { logOut } from '../lib/auth.js';
-import { createPost } from '../lib/firestore.js';
+import { savePost } from '../lib/firestore.js';
+import { posts } from './posts.js';
 
 export const home = () => {
   const homeSection = document.createElement('section');
@@ -7,6 +8,10 @@ export const home = () => {
 
   const homeMenu = document.createElement('menu');
   homeMenu.className = 'home-menu';
+
+  const homeMain = document.createElement('main');
+  homeMain.className = 'home-main';
+  homeMain.appendChild(posts());
 
   const logoutImage = document.createElement('img');
   logoutImage.className = 'logout-image';
@@ -20,32 +25,31 @@ export const home = () => {
     });
   });
 
-  const homeMain = document.createElement('main');
-  homeMain.className = 'home-main';
+  homeSection.appendChild(homeMenu);
+  homeMenu.appendChild(logoutImage);
 
-  const homeIcon = document.createElement('img');
-  homeIcon.className = 'home-icon';
+  // const homeIcon = document.createElement('img');
+  // homeIcon.className = 'home-icon';
   // imageHome.src = './img/home-icon.png';
 
   const postInput = document.createElement('textarea');
   postInput.className = 'post-input';
-  postInput.setAttribute('placeholder', "What's happening?"); // placeholder
+  postInput.placeholder = "What's happening?";
 
   const postButton = document.createElement('button');
   postButton.classList = 'post-button';
   postButton.textContent = 'Post';
 
   postButton.addEventListener('click', () => {
-    console.log(createPost(postInput.value));
-    // imprimir data en caja de input
+    savePost(postInput.value);
   });
 
-  homeSection.appendChild(homeMenu);
-  homeMenu.appendChild(logoutImage);
   homeSection.appendChild(homeMain);
-  homeMain.appendChild(homeIcon);
+  // homeSection.appendChild(pruebaDiv);
+  // homeMain.appendChild(homeIcon);
   homeMain.appendChild(postInput);
   homeMain.appendChild(postButton);
+  // homeMain.appendChild(postsDiv);
 
   homeSection.append(homeMenu, homeMain);
   return homeSection;

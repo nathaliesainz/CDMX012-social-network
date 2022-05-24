@@ -11,7 +11,7 @@ export const home = () => {
 
   const homeMain = document.createElement('main');
   homeMain.className = 'home-main';
-  homeMain.appendChild(posts());
+  // //homeMain.appendChild(posts());
 
   const logoutImage = document.createElement('img');
   logoutImage.className = 'logout-image';
@@ -42,14 +42,13 @@ export const home = () => {
 
   postButton.addEventListener('click', () => {
     savePost(postInput.value);
+    //homeMain.appendChild(posts());
   });
 
   homeSection.appendChild(homeMain);
-  // homeSection.appendChild(pruebaDiv);
-  // homeMain.appendChild(homeIcon);
   homeMain.appendChild(postInput);
   homeMain.appendChild(postButton);
-  // homeMain.appendChild(postsDiv);
+  homeMain.appendChild(posts());
 
   homeSection.append(homeMenu, homeMain);
   return homeSection;

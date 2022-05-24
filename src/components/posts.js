@@ -3,13 +3,19 @@ import { q } from '../lib/firestore.js';
 
 export const posts = () => {
   const divPost = document.createElement('div');
-  onSnapshot(q, (querySnapshot) => {
-    const postData = [];
+
+  onSnapshot(q(), (querySnapshot) => {
+    while (divPost.firstChild) {
+      divPost.removeChild(divPost.firstChild);
+    }
     querySnapshot.forEach((doc) => {
-      postData.push(doc.data().contenido);
-    });
-    postData.forEach((nota) => {
-      divPost.append(nota);
+      const container = document.createElement('article');
+      container.classList = 'post-div';
+      const p = document.createElement('p');
+      p.innerHTML = doc.data().contenido;
+      container.appendChild(p);
+      divPost.appendChild(container);
+      console.log(doc.data());
     });
   });
   return divPost;

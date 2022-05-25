@@ -9,9 +9,12 @@ export const home = () => {
   const homeMenu = document.createElement('menu');
   homeMenu.className = 'home-menu';
 
+  const homeHeader = document.createElement('h1');
+  homeHeader.className = 'home-header';
+  homeHeader.textContent = 'InstaCat';
+
   const homeMain = document.createElement('main');
   homeMain.className = 'home-main';
-  // //homeMain.appendChild(posts());
 
   const logoutImage = document.createElement('img');
   logoutImage.className = 'logout-image';
@@ -25,12 +28,13 @@ export const home = () => {
     });
   });
 
-  homeSection.appendChild(homeMenu);
-  homeMenu.appendChild(logoutImage);
+  const catsImage = document.createElement('img');
+  catsImage.className = 'cats-image';
+  catsImage.src = './img/home-image.png';
 
-  // const homeIcon = document.createElement('img');
-  // homeIcon.className = 'home-icon';
-  // imageHome.src = './img/home-icon.png';
+  homeSection.appendChild(homeMenu);
+  homeMenu.appendChild(homeHeader);
+  homeMenu.appendChild(logoutImage);
 
   const postInput = document.createElement('textarea');
   postInput.className = 'post-input';
@@ -42,10 +46,9 @@ export const home = () => {
 
   postButton.addEventListener('click', () => {
     savePost(postInput.value);
-    //homeMain.appendChild(posts());
   });
 
-  homeSection.appendChild(homeMain);
+  homeMain.appendChild(catsImage);
   homeMain.appendChild(postInput);
   homeMain.appendChild(postButton);
   homeMain.appendChild(posts());

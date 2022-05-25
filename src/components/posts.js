@@ -3,6 +3,7 @@ import { q } from '../lib/firestore.js';
 
 export const posts = () => {
   const divPost = document.createElement('div');
+  divPost.classList = 'div-container';
 
   onSnapshot(q(), (querySnapshot) => {
     while (divPost.firstChild) {

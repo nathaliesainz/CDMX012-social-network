@@ -30,11 +30,11 @@ export const login = () => {
 
   const loginSubtitle = document.createElement('h2');
   loginSubtitle.className = 'login-subtitle';
-  loginSubtitle.textContent = 'Log in using a valid email';
+  loginSubtitle.textContent = 'Sign in using a valid email';
 
   const loginButton = document.createElement('button');
   loginButton.className = 'login-button';
-  loginButton.textContent = 'Login with Google';
+  loginButton.textContent = 'Sign in with Google';
 
   const imageLoginButton = document.createElement('img');
   imageLoginButton.className = 'image-button';

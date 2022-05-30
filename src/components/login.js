@@ -57,7 +57,12 @@ export const login = () => {
   loginTip.className = 'login-tip';
   loginTip.textContent = 'Never share your credentials!';
 
+  const mobileLoginImage = document.createElement('img');
+  mobileLoginImage.className = 'mobile-image';
+  mobileLoginImage.src = './img/mobile-login-image.jpg';
+
   secondLoginDiv.appendChild(loginCard);
+  secondLoginDiv.appendChild(mobileLoginImage);
   loginCard.appendChild(loginTitle);
   loginCard.appendChild(loginSubtitle);
   loginCard.appendChild(loginButton);

@@ -16,6 +16,10 @@ export const home = () => {
   const homeMain = document.createElement('main');
   homeMain.className = 'home-main';
 
+  const homeImage = document.createElement('img');
+  homeImage.className = 'home-image';
+  homeImage.src = './img/home-icon.png';
+
   const logoutImage = document.createElement('img');
   logoutImage.className = 'logout-image';
   logoutImage.src = './img/logout-icon.png';
@@ -34,6 +38,7 @@ export const home = () => {
 
   homeSection.appendChild(homeMenu);
   homeMenu.appendChild(homeHeader);
+  homeMenu.appendChild(homeImage);
   homeMenu.appendChild(logoutImage);
 
   const postInput = document.createElement('textarea');

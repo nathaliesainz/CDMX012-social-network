@@ -177,7 +177,6 @@
 .home-main {
   display: flex;
   flex-direction: column;
-  height: 100vh;
   width: 100%;
 }
 
@@ -192,15 +191,13 @@
 .div-container {
   display: flex;
   flex-direction: column;
-  height: 100%;
   width: 100%;
-  /* border: 2px solid red; */
 }
 
 .post-input {
   display: flex;
-  height: 20%;
-  width: 25%;
+  height: 130px;
+  width: 475px;
   font-size: 18px;
   font-family: 'Nanum Gothic Coding';
   margin: 0 auto;
@@ -242,7 +239,7 @@
 .post-div {
   position: relative;
   flex-direction: column;
-  height: 20%;
+  height: 130px;
   width: 25%;
   font-size: 18px;
   font-family: 'Nanum Gothic Coding';
@@ -256,6 +253,10 @@
   word-break: break-all;
   border-radius: 10px;
   border: 2px solid black;
+}
+
+.post-content {
+  order: -1;
 }
 
 .delete-button {

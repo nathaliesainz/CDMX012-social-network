@@ -13,6 +13,7 @@ export const posts = () => {
       const container = document.createElement('article');
       container.classList = 'post-div';
       const p = document.createElement('p');
+      p.className = 'post-content';
       p.innerHTML = doc.data().contenido;
       const deleteImage = document.createElement('img');
       deleteImage.className = 'delete-button';
